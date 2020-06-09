@@ -1,0 +1,11 @@
+#!/bin/bash
+
+docker-compose exec app set COMPOSER_MEMORY_LIMIT=-1
+docker-compose exec app composer create-project $1 temp --no-install
+
+docker-compose exec app mv temp/* .
+docker-compose exec app mv temp/.* .
+
+docker-compose exec app rm -rf temp
+
+docker-compose exec app composer install
