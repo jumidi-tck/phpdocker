@@ -8,6 +8,7 @@ services:
     restart: unless-stopped
     volumes:
       - ./:/var/www
+      - .infrastructure/docker/fpm/content/etc/conf.d:/usr/local/etc/php/conf.d
     networks:
       - phpdocker
   web:

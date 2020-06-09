@@ -15,6 +15,13 @@ You only need docker installed on your machine.
 
 Clone the repository.
 
-Modify your configuration and run 
+Modify your configuration and run
 
 `docker-compose up`
+
+### Create projects
+
+#### Drupal
+
+`infrastructure/bin/create-project drupal/recommended-project`
+
